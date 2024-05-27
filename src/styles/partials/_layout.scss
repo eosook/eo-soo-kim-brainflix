@@ -1,0 +1,45 @@
+@use './responsive' as *;
+
+@mixin paddingBeforeHead{
+    padding: 1.5rem 0 1rem;
+
+    @include tablet{
+        padding: 2rem 0 1.5rem;
+    }
+}
+
+@mixin paddingComponents{
+    padding-bottom: 1rem;
+
+    @include tablet{
+        padding-bottom: 1.5rem;
+    }
+}
+
+@mixin margin{
+    margin: 0 1rem;
+
+    @include tablet{
+        margin: 0 2rem;
+    }
+
+    @include desktop{
+        margin: 0 auto;
+    }
+}
+
+@mixin marginBeforeHead($leftRight){
+    margin: 1.5rem $leftRight 1rem;
+
+    @include tablet{
+        margin: 2rem $leftRight 1.5rem;
+    }
+}
+
+@mixin marginComponents{
+    margin-bottom: 1rem;
+
+    @include tablet{
+        margin-bottom: 1.5rem;
+    }
+}

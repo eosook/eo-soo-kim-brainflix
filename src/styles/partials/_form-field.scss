@@ -1,0 +1,15 @@
+@use './colors' as *;
+
+@mixin formField{
+    height: 36px;
+    min-width: 240px;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 4px;
+    border: 1px solid $secondary-mercury;
+    background-color: $secondary-alabaster;
+
+    &:active{
+        border: 2px solid $primary-blue;
+    }
+}
