@@ -1,0 +1,54 @@
+@use '../../styles/partials/responsive' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/button' as *;
+@use '../../styles/partials/form-field' as *;
+@use '../../styles/partials/layout' as *;
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__logo{
+        @include marginBeforeHead(auto);
+        max-height: 25px;
+        max-width: 120px;
+    }
+}
+
+.form{
+    @include margin;
+
+    &__divider{
+        @include paddingComponents;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 36px;
+    }
+    &__search{
+        background: url(../../assets/images/icons/search.svg) no-repeat;
+        background-position: left;
+        height: 100%;
+        width: 80%;
+        @include formField;
+    }
+    &__avatar{
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        background-color: $secondary-mercury;
+
+        @include tablet{
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    &__submit{
+        background: url(../../assets/images/icons/upload.svg) no-repeat;
+        background-position: left;
+        @include button;
+        width: 100%;
+    }
+}
