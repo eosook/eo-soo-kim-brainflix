@@ -1,0 +1,73 @@
+@use './responsive' as *;
+
+@font-face{
+    font-family: "Avenir";
+    src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: "Avenir";
+    src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype");
+    font-weight: 600;
+}
+
+@font-face{
+    font-family: "Avenir";
+    src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
+    font-weight: 700
+}
+
+@mixin fontHeader{
+    font-family: avenir, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+
+    @include tablet{
+        font-size: 33px;
+        line-height: 44px;
+    }
+}
+
+@mixin fontSectionHeader{
+    font-family: avenir, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+@mixin fontSubHeader{
+    font-family: avenir, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+
+    @include tablet{
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@mixin fontBody{
+    font-family: avenir, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+
+    @include tablet{
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@mixin fontLabelButton{
+    font-family: avenir, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+
+    @include tablet{
+        font-size: 12px;
+    }
+}
