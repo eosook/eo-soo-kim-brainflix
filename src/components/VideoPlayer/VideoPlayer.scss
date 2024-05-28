@@ -1,0 +1,10 @@
+@use '../../styles/partials/responsive' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/button' as *;
+@use '../../styles/partials/form-field' as *;
+@use '../../styles/partials/layout' as *;
+
+.player{
+    width: 100%;
+    background-color: $secondary-black
+}
