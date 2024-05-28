@@ -36,10 +36,18 @@
     }
 }
 
-@mixin marginComponents{
+@mixin marginBottom{
     margin-bottom: 1rem;
 
     @include tablet{
         margin-bottom: 1.5rem;
+    }
+}
+
+@mixin marginRight{
+    margin-right: 1rem;
+
+    @include tablet{
+        margin-right: 1.5rem;
     }
 }
