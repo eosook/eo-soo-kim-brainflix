@@ -1,10 +1,17 @@
-@use '../../styles/partials/responsive' as *;
-@use '../../styles/partials/colors' as *;
-@use '../../styles/partials/button' as *;
-@use '../../styles/partials/form-field' as *;
-@use '../../styles/partials/layout' as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/button" as *;
+@use "../../styles/partials/form-field" as *;
+@use "../../styles/partials/layout" as *;
 
-.player{
+.player {
+  width: 100%;
+  background-color: $secondary-black;
+  display: flex;
+  justify-content: center;
+
+  &__video{
     width: 100%;
-    background-color: $secondary-black
+    max-width: 1100px;
+  }
 }
