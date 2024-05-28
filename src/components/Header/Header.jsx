@@ -9,11 +9,9 @@ function Header(){
         <header className="header">
             <img src={logo} alt="BrainFlix Logo" className="header__logo"></img>
             <form className="form">
-                <div className="form__divider">
-                    <input type="text" className="form__search"></input>
-                    <img src={avatar} className="form__avatar"></img>
-                </div>
+                <input type="text" className="form__search" placeholder="Search"></input>
                 <button type="submit" className="form__submit">upload</button>
+                <img src={avatar} className="form__avatar"></img>
             </form>
         </header>
     )
