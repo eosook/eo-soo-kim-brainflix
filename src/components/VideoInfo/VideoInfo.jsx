@@ -2,28 +2,23 @@ import "./VideoInfo.scss";
 import viewsLogo from '../../assets/images/icons/views.svg'
 import likesLogo from '../../assets/images/icons/likes.svg'
 
-function VideoInfo() {
+function VideoInfo({videoInfo}) {
+  console.log(videoInfo);
+  let date = new Date(videoInfo.timestamp);
   return (
     <div className="info">
-      <h1 className="info__title">The Future of Artificial Intelligence</h1>
+      <h1 className="info__title">{videoInfo.title}</h1>
       <div className="info__metrics">
         <div className="info__metrics--divider">
-          <div className="info__channel info--padding">By Aiden Thompson</div>
-          <div className="info__date info--padding">8/8/2023</div>
+          <div className="info__channel info--padding">By {videoInfo.channel}</div>
+          <div className="info__date info--padding">{date.toLocaleDateString('en-US')}</div>
         </div>
         <div className="info__metrics--divider">
-          <div className="info__numbers info--padding"><img src={viewsLogo}></img>980,544</div>
-          <div className="info__numbers info--padding"><img src={likesLogo}></img>22,479</div>
+          <div className="info__numbers info--padding"><img src={viewsLogo}></img>{videoInfo.views}</div>
+          <div className="info__numbers info--padding"><img src={likesLogo}></img>{videoInfo.likes}</div>
         </div>
       </div>
-      <div className="info__description">
-        Explore the cutting-edge developments and predictions for Artificial
-        Intelligence in the coming years. From revolutionary breakthroughs in
-        machine learning to the ethical considerations influencing AI
-        advancements, this exploration transcends the boundaries of mere
-        speculation. Join us on a journey that navigates the intricate interplay
-        between innovation, ethics, and the ever-evolving tech frontier
-      </div>
+      <div className="info__description">{videoInfo.description}</div>
     </div>
   );
 }

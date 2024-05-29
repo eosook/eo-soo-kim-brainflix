@@ -19,7 +19,7 @@ function App() {
     <>
       <Header />
       <VideoPlayer />
-      <VideoInfo />
+      <VideoInfo videoInfo={videoData[currentVideo]}/>
       <Comments commentsList={comments} />
     </>
   )

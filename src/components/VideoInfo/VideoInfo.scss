@@ -25,6 +25,7 @@
 
   &__channel {
     @include fontSubHeader;
+    text-wrap: no-wrap;
   }
 
   &__metrics {
