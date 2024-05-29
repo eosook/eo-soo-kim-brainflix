@@ -1,0 +1,51 @@
+@use '../../styles/partials/responsive' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/button' as *;
+@use '../../styles/partials/form-field' as *;
+@use '../../styles/partials/layout' as *;
+@use '../../styles/partials/fonts' as *;
+
+.info{
+    @include fontBody;
+    @include paddingBeforeHead;
+    @include margin;
+
+    &__title{
+        @include fontHeader;
+        @include paddingComponents;
+        @include marginBottom;
+        border-bottom: 1px solid $secondary-mercury;
+    }
+
+    &__channel{
+        @include fontSubHeader;
+    }
+
+    &__metrics{
+        @include marginBottom;
+        border-bottom: 1px solid $secondary-mercury;
+        display: flex;
+        color: $primary-silver;
+
+        &--divider{
+            width: 50%;         
+        }
+    }
+
+    &__channel{
+        color: $primary-black;
+    }
+
+    &__numbers{
+        display: flex;
+        align-items: center;
+
+        img{
+            margin-right: 0.5rem;
+        }
+    }
+
+    &--padding{
+        @include paddingComponents;
+    }
+}
