@@ -5,12 +5,16 @@ function Comments({commentsList}){
     
     return(
         <div className="comments">
-            <div className="comments__number"></div>
-            <form className="comments__form">
-                <img></img>
-                <label for="comment">join the conversation</label>
-                <textarea name="comment"></textarea>
-                <button type="submit">comment</button>
+            <div className="comments__number">{commentsList.length} comments</div>
+            <form className="comments-form">
+                <div className="comments-form__image" title="avatar"></div>
+                <div className="comments__divider">
+                    <label className="comments-form__label" for="comment">join the conversation</label>
+                    <div className="comments__input">
+                        <textarea className="comments-form__textarea" name="comment" placeholder="Add a new comment"></textarea>
+                        <button className="comments-form__button" type="submit">comment</button>
+                    </div>
+                </div>
             </form>
             {commentsList.map((comment) => {
                 return (
