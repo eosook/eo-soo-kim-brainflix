@@ -21,6 +21,7 @@ function App() {
       <VideoPlayer poster={videoData[currentVideo].image}/>
       <VideoInfo videoInfo={videoData[currentVideo]}/>
       <Comments commentsList={comments} />
+      <VideoList videoList={videoData} currentVideo={currentVideo}/>
     </>
   )
 }
