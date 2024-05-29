@@ -1,0 +1,17 @@
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/layout" as *;
+@use "../../styles/partials/fonts" as *;
+
+.video-list{
+    @include margin;
+    @include paddingComponents;
+    max-width: 300px;
+
+    &__header{
+        @include fontSubHeader;
+        @include marginBottom;
+        text-transform: uppercase;
+        color: $primary-silver;
+    }
+}

@@ -1,11 +1,14 @@
 import './VideoList.scss'
+import Video from './Video/Video';
 
-function VideoList({videoList, currentVideo}){
+function VideoList({videoList, currentVideo, changeVideo}){
+    videoList.splice(currentVideo, 1);
     return (
         <div className="video-list">
-            {videoList.map((video) => {
+            <div className="video-list__header">next videos</div>
+            {videoList.map((video, index) => {
                 return (
-                    <Video poster={video.image} title={video.title} channel={video.channel}/>
+                    <Video key={index} poster={video.image} title={video.title} channel={video.channel} changeVideo={changeVideo} index={index}/>
                 )
             })}
         </div>

@@ -1,8 +1,6 @@
 import "./SingleComment.scss";
 
 function SingleComment({ name, comment, time }) {
-  console.log(name);
-  console.log(comment);
   let date = new Date(time);
   return (
     <div className="comment">

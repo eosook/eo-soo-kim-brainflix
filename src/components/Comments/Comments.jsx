@@ -8,7 +8,7 @@ function Comments({ commentsList }) {
       <form className="comments-form">
         <div className="comments-form__image" title="avatar"></div>
         <div className="comments__divider">
-          <label className="comments-form__label" for="comment">
+          <label className="comments-form__label" htmlFor="comment">
             join the conversation
           </label>
           <div className="comments__input">
@@ -23,9 +23,10 @@ function Comments({ commentsList }) {
           </div>
         </div>
       </form>
-      {commentsList.map((comment) => {
+      {commentsList.map((comment, index) => {
         return (
           <SingleComment
+            key={index}
             name={comment.name}
             comment={comment.comment}
             time={comment.timestamp}

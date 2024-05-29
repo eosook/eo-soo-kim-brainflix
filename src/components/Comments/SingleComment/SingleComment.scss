@@ -10,7 +10,9 @@
   display: flex;
 
   &:last-child {
-    border-bottom: none;
+    @include desktop{
+      border-bottom: none;
+    }
   }
 
   &__avatar {
