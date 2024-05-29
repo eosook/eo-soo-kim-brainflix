@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Header />
-      <VideoPlayer />
+      <VideoPlayer poster={videoData[currentVideo].image}/>
       <VideoInfo videoInfo={videoData[currentVideo]}/>
       <Comments commentsList={comments} />
     </>
