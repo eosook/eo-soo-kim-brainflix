@@ -1,9 +1,8 @@
 import './Comments.scss'
 
-function Comments(){
+function Comments({commentsList}){
     return(
         <>
-            
         </>
     )
 }
