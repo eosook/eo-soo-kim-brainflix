@@ -9,12 +9,18 @@
     @include fontBody;
     @include paddingBeforeHead;
     @include margin;
+    max-width: 1300px;
 
     &__title{
         @include fontHeader;
         @include paddingComponents;
         @include marginBottom;
         border-bottom: 1px solid $secondary-mercury;
+
+        @include tablet{
+            margin: 0;
+            border-bottom: none;
+        }
     }
 
     &__channel{
@@ -27,8 +33,18 @@
         display: flex;
         color: $primary-silver;
 
+        @include tablet{
+            justify-content: space-between;
+        }
+
         &--divider{
-            width: 50%;         
+            width: 50%;
+
+            @include tablet{
+                display: flex;
+                width: 25%;
+                justify-content: space-between;
+            }
         }
     }
 
