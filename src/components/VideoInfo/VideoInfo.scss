@@ -1,67 +1,67 @@
-@use '../../styles/partials/responsive' as *;
-@use '../../styles/partials/colors' as *;
-@use '../../styles/partials/button' as *;
-@use '../../styles/partials/form-field' as *;
-@use '../../styles/partials/layout' as *;
-@use '../../styles/partials/fonts' as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/button" as *;
+@use "../../styles/partials/form-field" as *;
+@use "../../styles/partials/layout" as *;
+@use "../../styles/partials/fonts" as *;
 
-.info{
-    @include fontBody;
-    @include paddingBeforeHead;
-    @include margin;
-    max-width: 1300px;
+.info {
+  @include fontBody;
+  @include paddingBeforeHead;
+  @include margin;
+  max-width: 1300px;
 
-    &__title{
-        @include fontHeader;
-        @include paddingComponents;
-        @include marginBottom;
-        border-bottom: 1px solid $secondary-mercury;
+  &__title {
+    @include fontHeader;
+    @include paddingComponents;
+    @include marginBottom;
+    border-bottom: 1px solid $secondary-mercury;
 
-        @include tablet{
-            margin: 0;
-            border-bottom: none;
-        }
+    @include tablet {
+      margin: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__channel {
+    @include fontSubHeader;
+  }
+
+  &__metrics {
+    @include marginBottom;
+    border-bottom: 1px solid $secondary-mercury;
+    display: flex;
+    color: $primary-silver;
+
+    @include tablet {
+      justify-content: space-between;
     }
 
-    &__channel{
-        @include fontSubHeader;
-    }
+    &--divider {
+      width: 50%;
 
-    &__metrics{
-        @include marginBottom;
-        border-bottom: 1px solid $secondary-mercury;
+      @include tablet {
         display: flex;
-        color: $primary-silver;
-
-        @include tablet{
-            justify-content: space-between;
-        }
-
-        &--divider{
-            width: 50%;
-
-            @include tablet{
-                display: flex;
-                width: 25%;
-                justify-content: space-between;
-            }
-        }
+        width: 25%;
+        justify-content: space-between;
+      }
     }
+  }
 
-    &__channel{
-        color: $primary-black;
+  &__channel {
+    color: $primary-black;
+  }
+
+  &__numbers {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 0.5rem;
     }
+  }
 
-    &__numbers{
-        display: flex;
-        align-items: center;
-
-        img{
-            margin-right: 0.5rem;
-        }
-    }
-
-    &--padding{
-        @include paddingComponents;
-    }
+  &--padding {
+    @include paddingComponents;
+  }
 }
