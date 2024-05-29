@@ -1,0 +1,46 @@
+@use '../../../styles/partials/responsive' as *;
+@use '../../../styles/partials/colors' as *;
+@use '../../../styles/partials/layout' as *;
+@use '../../../styles/partials/fonts' as *;
+
+.comment{
+    @include fontBody;
+    @include marginBottom;
+    border-bottom: 1px solid $secondary-mercury;
+    display: flex;
+
+    &:last-child{
+        border-bottom: none;
+    }
+
+    &__avatar{
+        height: 36px;
+        min-width: 36px;
+        border-radius: 50%;
+        background-color: $secondary-mercury;
+        @include marginRight;
+
+        @include tablet{
+            height: 40px;
+            min-width: 40px;
+        }
+    }
+
+    &__divider{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    &__name{
+        @include fontSubHeader;
+    }
+
+    &__date{
+        color: $primary-silver;
+    }
+
+    &__comment{
+        @include marginBottom;
+    }
+}

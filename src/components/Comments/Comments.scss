@@ -27,6 +27,7 @@
 }
 
 .comments-form{
+    @include marginBottom;
     display: flex;
     width: 100%;
     border-bottom: 1px solid $secondary-mercury;
