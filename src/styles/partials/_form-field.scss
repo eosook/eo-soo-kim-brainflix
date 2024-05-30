@@ -1,17 +1,17 @@
-@use './colors' as *;
-@use './fonts' as *;
+@use "./colors" as *;
+@use "./fonts" as *;
 
-@mixin formField{
-    @include fontBody;
-    height: 36px;
-    min-width: 240px;
-    border-radius: 4px;
-    padding: 12px;
-    border: 1px solid $secondary-mercury;
-    background-color: $secondary-alabaster;
-    outline: none;
+@mixin formField {
+  @include fontBody;
+  height: 36px;
+  min-width: 240px;
+  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid $secondary-mercury;
+  background-color: $secondary-alabaster;
+  outline: none;
 
-    &:focus{
-        border: 2px solid $primary-blue;
-    }
+  &:focus {
+    border: 2px solid $primary-blue;
+  }
 }

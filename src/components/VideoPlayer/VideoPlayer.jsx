@@ -1,14 +1,10 @@
 import "./VideoPlayer.scss";
 
-function VideoPlayer({poster}) {
+function VideoPlayer({ poster }) {
   return (
     <>
       <div className="player">
-        <video
-          className="player__video"
-          poster={poster}
-          controls
-        >
+        <video className="player__video" poster={poster} controls>
           <source src=""></source>
         </video>
       </div>

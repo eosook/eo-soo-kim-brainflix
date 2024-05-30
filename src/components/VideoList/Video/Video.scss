@@ -3,32 +3,32 @@
 @use "../../../styles/partials/layout" as *;
 @use "../../../styles/partials/fonts" as *;
 
-.video{
-    @include marginBottom;
+.video {
+  @include marginBottom;
+  display: flex;
+
+  &__poster {
+    @include marginRight;
+    width: 120px;
+    border-radius: 0.25rem;
+    background-color: $secondary-mercury;
+  }
+
+  &__title {
+    @include fontSubHeader;
+  }
+
+  &__channel {
+    @include fontBody;
+  }
+
+  &__divider {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-    &__poster{
-        @include marginRight;
-        width: 120px;
-        border-radius: 0.25rem;
-        background-color: $secondary-mercury;
-    }
-
-    &__title{
-        @include fontSubHeader;
-    }
-
-    &__channel{
-        @include fontBody;
-    }
-
-    &__divider{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    &:hover{
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }

@@ -1,18 +1,18 @@
-@use './colors' as *;
-@use './fonts' as *;
+@use "./colors" as *;
+@use "./fonts" as *;
 
-@mixin button{
-    @include fontLabelButton;
-    background-color: $primary-blue;
-    color: $primary-white;
-    min-width: 150px;
-    height: 40px;
-    padding: 0 2rem;
-    border-radius: 0.25rem;
-    border: none;
-    text-transform: uppercase;
+@mixin button {
+  @include fontLabelButton;
+  background-color: $primary-blue;
+  color: $primary-white;
+  min-width: 150px;
+  height: 40px;
+  padding: 0 2rem;
+  border-radius: 0.25rem;
+  border: none;
+  text-transform: uppercase;
 
-    &:hover{
-        background-color: $secondary-blue;
-    }
+  &:hover {
+    background-color: $secondary-blue;
+  }
 }

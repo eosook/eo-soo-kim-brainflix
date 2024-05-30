@@ -1,94 +1,94 @@
-@use '../../styles/partials/responsive' as *;
-@use '../../styles/partials/colors' as *;
-@use '../../styles/partials/button' as *;
-@use '../../styles/partials/form-field' as *;
-@use '../../styles/partials/layout' as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/button" as *;
+@use "../../styles/partials/form-field" as *;
+@use "../../styles/partials/layout" as *;
 
-.header{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
-    @include tablet{
-        flex-direction: row;
-        justify-content: space-between;
-        max-width: 1300px;
-        margin: 0 auto;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    @include marginBeforeHead(auto);
+    max-height: 25px;
+    max-width: 120px;
+
+    @include tablet {
+      @include marginBeforeHead(1.5rem);
     }
-
-    &__logo{
-        @include marginBeforeHead(auto);
-        max-height: 25px;
-        max-width: 120px;
-
-        @include tablet{
-            @include marginBeforeHead(1.5rem)
-        }
-    }
+  }
 }
 
-.form{
-    @include margin;
-    @include paddingComponents;
-    position: relative;
-    
-    @include tablet{
-        @include marginRight;
-        margin-top: 0.5rem;
-        display: flex;
-        align-items: center;
-        padding: 0;
+.form {
+  @include margin;
+  @include paddingComponents;
+  position: relative;
+
+  @include tablet {
+    @include marginRight;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__divider {
+    @include marginBottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+
+    @include tablet {
+      margin: 0;
+      @include marginRight;
     }
+  }
+  &__search {
+    @include formField;
+    @include marginBottom;
+    background: url(../../assets/images/icons/search.svg) no-repeat 10px 8px;
+    height: 36px;
+    width: 80%;
+    padding-left: 2.5rem;
 
-    &__divider{
-        @include marginBottom;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 36px;
-
-        @include tablet{
-            margin: 0;
-            @include marginRight;
-        }
+    @include tablet {
+      margin: 0;
+      height: 40px;
+      @include marginRight;
     }
-    &__search{
-        @include formField;
-        @include marginBottom;
-        background: url(../../assets/images/icons/search.svg) no-repeat 10px 8px;
-        height: 36px;
-        width: 80%;
-        padding-left: 2.5rem;
+  }
+  &__avatar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: $secondary-mercury;
 
-        @include tablet{
-            margin: 0;
-            height: 40px;
-            @include marginRight;
-        }
+    @include tablet {
+      position: relative;
+      height: 40px;
+      width: 40px;
     }
-    &__avatar{
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 36px;
-        width: 36px;
-        border-radius: 50%;
-        background-color: $secondary-mercury;
+  }
 
-        @include tablet{
-            position: relative;
-            height: 40px;
-            width: 40px;
-        }
+  &__submit {
+    background: url(../../assets/images/icons/upload.svg) no-repeat 10px 8px;
+    @include button;
+    width: 100%;
+
+    @include tablet {
+      @include marginRight;
     }
-
-    &__submit{
-        background: url(../../assets/images/icons/upload.svg) no-repeat 10px 8px;
-        @include button;
-        width: 100%;
-
-        @include tablet{
-            @include marginRight;
-        }
-    }
+  }
 }
