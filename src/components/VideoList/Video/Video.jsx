@@ -2,9 +2,10 @@ import "./Video.scss";
 
 function Video({ id, poster, title, channel, changeVideo, videoList }) {
   let index = videoList.findIndex((video) => video.id === id);
+  let videoAlt = "video " + index
   return (
     <div className="video" onClick={() => changeVideo(index)}>
-      <img className="video__poster" src={poster}></img>
+      <img className="video__poster" src={poster} alt={videoAlt}></img>
       <div className="video__divider">
         <h2 className="video__title">{title}</h2>
         <div className="video__channel">{channel}</div>
