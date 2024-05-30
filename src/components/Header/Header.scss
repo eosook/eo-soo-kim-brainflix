@@ -67,18 +67,20 @@
     }
   }
   &__avatar {
+    background: url(../../assets/images/Mohan-muruge.jpg) no-repeat;
+    background-size: cover;
     position: absolute;
     right: 0;
     top: 0;
     height: 36px;
-    width: 36px;
+    min-width: 36px;
     border-radius: 50%;
     background-color: $secondary-mercury;
 
     @include tablet {
       position: relative;
       height: 40px;
-      width: 40px;
+      min-width: 40px;
     }
   }
 

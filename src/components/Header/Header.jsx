@@ -15,7 +15,7 @@ function Header() {
         <button type="submit" className="form__submit">
           upload
         </button>
-        <img src={avatar} className="form__avatar"></img>
+        <div className="form__avatar"></div>
       </form>
     </header>
   );
