@@ -3,7 +3,6 @@ import viewsLogo from '../../assets/images/icons/views.svg'
 import likesLogo from '../../assets/images/icons/likes.svg'
 
 function VideoInfo({videoInfo}) {
-  console.log(videoInfo);
   let date = new Date(videoInfo.timestamp);
   return (
     <div className="info">
