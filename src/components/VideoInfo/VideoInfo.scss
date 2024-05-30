@@ -32,7 +32,6 @@
     @include marginBottom;
     border-bottom: 1px solid $secondary-mercury;
     display: flex;
-    color: $primary-silver;
 
     @include tablet {
       justify-content: space-between;
@@ -53,9 +52,14 @@
     color: $primary-black;
   }
 
+  &__date{
+    color: $primary-silver;
+  }
+
   &__numbers {
     display: flex;
     align-items: center;
+    color: $primary-silver;
 
     img {
       margin-right: 0.5rem;
