@@ -11,6 +11,10 @@
   @include margin;
   max-width: 1300px;
 
+  @include desktop{
+    border-right: 1px solid $secondary-mercury;
+  }
+
   &__title {
     @include fontHeader;
     @include paddingComponents;
@@ -35,6 +39,10 @@
 
     @include tablet {
       justify-content: space-between;
+    }
+
+    @include desktop{
+      padding-right: 1.5rem;
     }
 
     &--divider {

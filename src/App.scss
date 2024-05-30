@@ -9,3 +9,21 @@
   box-sizing: border-box;
   color: $primary-black;
 }
+
+.main{
+    max-width: 1300px;
+
+    @include desktop{
+        @include margin;
+        display: flex;
+        justify-content: space-between;
+
+        &__info-comments{
+            width: 900px;
+        }
+
+        &__divider{
+            width: 400px;
+        }
+    }
+}

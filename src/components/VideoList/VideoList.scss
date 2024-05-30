@@ -6,7 +6,12 @@
 .video-list {
   @include margin;
   @include paddingComponents;
-  max-width: 300px;
+  max-width: 400px;
+
+  @include desktop{
+    padding: 1.5rem 0 0 1.5rem;
+    margin: 0;
+  }
 
   &__header {
     @include fontSubHeader;

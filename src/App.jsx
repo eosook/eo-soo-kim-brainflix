@@ -23,13 +23,19 @@ function App() {
     <>
       <Header />
       <VideoPlayer poster={videoData[currentVideo].image} />
-      <VideoInfo videoInfo={videoData[currentVideo]} />
-      <Comments commentsList={comments} />
-      <VideoList
-        videoList={videoData}
-        currentVideo={currentVideo}
-        changeVideo={changeVideo}
-      />
+      <div className="main">
+        <div className="main__info-comments">
+        <VideoInfo videoInfo={videoData[currentVideo]} />
+        <Comments commentsList={comments} />
+        </div>
+        <div className="main__divider">
+          <VideoList
+            videoList={videoData}
+            currentVideo={currentVideo}
+            changeVideo={changeVideo}
+          />
+        </div>
+      </div>
     </>
   );
 }
