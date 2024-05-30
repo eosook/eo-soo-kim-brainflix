@@ -33,8 +33,13 @@
   width: 100%;
   border-bottom: 1px solid $secondary-mercury;
 
+  @include desktop{
+    padding: 0 1.5rem;
+  }
+
   &__label {
     @include fontSubHeader;
+    font-weight: 400;
     color: $primary-silver;
     text-transform: uppercase;
   }
