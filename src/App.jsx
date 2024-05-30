@@ -10,13 +10,10 @@ import VideoList from "./components/VideoList/VideoList";
 function App() {
   const [currentVideo, setCurrentVideo] = useState(0);
   const [comments, setComments] = useState(videoData[currentVideo].comments);
-  const [cloneData, setCloneData] = useState(videoData.slice());
 
   function changeVideo(index) {
     setCurrentVideo(index);
-    console.log(index);
-    setComments(videoData[currentVideo].comments);
-    setCloneData(videoData.slice());
+    setComments(videoData[index].comments);
   }
 
   return (
