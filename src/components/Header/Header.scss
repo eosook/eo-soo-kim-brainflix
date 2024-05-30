@@ -53,9 +53,9 @@
     }
   }
   &__search {
-    @include formField;
     @include marginBottom;
     background: url(../../assets/images/icons/search.svg) no-repeat 10px 8px;
+    @include formField;
     height: 36px;
     width: 80%;
     padding-left: 2.5rem;
