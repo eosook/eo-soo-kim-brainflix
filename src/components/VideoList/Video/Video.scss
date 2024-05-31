@@ -6,7 +6,7 @@
 .video {
   @include marginBottom;
   display: flex;
-  height: 80px;
+  height: 70px;
 
   &__poster {
     @include marginRight;
