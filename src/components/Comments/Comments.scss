@@ -75,7 +75,7 @@
     background: url(../../assets/images/Mohan-muruge.jpg) no-repeat;
     background-size: cover;
     height: 36px;
-    width: 36px;
+    min-width: 36px;
     border-radius: 50%;
     background-color: $secondary-mercury;
     margin-top: 1.5rem;
