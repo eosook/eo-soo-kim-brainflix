@@ -3,6 +3,7 @@
 
 @mixin button {
   @include fontLabelButton;
+  font-weight: 400;
   background-color: $primary-blue;
   color: $primary-white;
   min-width: 150px;
