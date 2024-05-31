@@ -9,11 +9,9 @@ import VideoList from "./components/VideoList/VideoList";
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(0);
-  const [comments, setComments] = useState(videoData[currentVideo].comments);
-
+  
   function changeVideo(index) {
     setCurrentVideo(index);
-    setComments(videoData[index].comments);
   }
 
   return (
@@ -23,7 +21,7 @@ function App() {
       <div className="main">
         <div className="main__info-comments">
         <VideoInfo videoInfo={videoData[currentVideo]} />
-        <Comments commentsList={comments} />
+        <Comments commentsList={videoData[currentVideo].comments} />
         </div>
         <div className="main__divider">
           <VideoList
