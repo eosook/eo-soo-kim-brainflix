@@ -1,7 +1,7 @@
 import "./SingleComment.scss";
 
 function SingleComment({ name, comment, time }) {
-  let date = new Date(time);
+  const date = new Date(time);
   return (
     <div className="comment">
       <div className="comment__avatar"></div>
