@@ -58,6 +58,8 @@
 
   &__channel {
     color: $primary-black;
+    padding-right: 1.5rem;
+    text-wrap: nowrap;
   }
 
   &__date {
@@ -67,10 +69,14 @@
   &__numbers {
     display: flex;
     align-items: center;
-    color: $primary-silver;
 
     img {
       margin-right: 0.5rem;
+    }
+
+    &--font{
+      margin-top: 0.25rem;
+      color: $primary-silver;
     }
   }
 

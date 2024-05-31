@@ -19,11 +19,11 @@ function VideoInfo({ videoInfo }) {
         <div className="info__metrics--divider">
           <div className="info__numbers info--padding">
             <img src={viewsLogo}></img>
-            {videoInfo.views}
+            <div className="info__numbers--font">{videoInfo.views}</div>
           </div>
           <div className="info__numbers info--padding">
             <img src={likesLogo}></img>
-            {videoInfo.likes}
+            <div className="info__numbers--font">{videoInfo.likes}</div>
           </div>
         </div>
       </div>
