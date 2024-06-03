@@ -8,7 +8,7 @@
 .upload-form{
 
     &__label{
-        @include fontSubHeader;
+        @include fontBody;
         text-transform: uppercase;
         color: $primary-silver;
         font-weight: 600;
@@ -18,6 +18,12 @@
     &__thumbnail{
         @include marginBottom;
         width: 100%;
+        border-radius: 4px;
+        background-color: $secondary-mercury;
+
+        @include tablet{
+
+        }
     }
 
     &__title{
@@ -39,15 +45,16 @@
         background: url(../../assets/images/icons/publish.svg) no-repeat 10px 8px;
         @include button;
         @include marginBottom;
-        font-weight: 400;
+        @include fontBody;
+        font-weight: 600;
         width: 100%;
     }
 
     &__cancel{
         &--font{
-            @include fontLabelButton;
             @include paddingBeforeHead;
-            font-weight: 400;
+            @include fontBody;
+            font-weight: 600;
             color: $primary-blue;
             text-transform: uppercase;
             text-align: center;
