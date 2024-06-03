@@ -6,6 +6,7 @@ import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 import VideoInfo from "./components/VideoInfo/VideoInfo";
 import Comments from "./components/Comments/Comments";
 import VideoList from "./components/VideoList/VideoList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [currentVideo, setCurrentVideo] = useState(0);
