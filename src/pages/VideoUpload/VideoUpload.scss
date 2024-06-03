@@ -8,6 +8,11 @@
     padding-bottom: 1.5rem;
     border-top: 1px solid $secondary-mercury;
 
+    @include desktop{
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
     &__header{
         @include fontHeader;
         @include paddingBeforeHead;

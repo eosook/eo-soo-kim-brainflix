@@ -7,12 +7,12 @@
 
 .upload-form{
 
-    &__label{
-        @include fontBody;
-        text-transform: uppercase;
-        color: $primary-silver;
-        font-weight: 600;
-        padding-bottom: 0.25rem;
+    &__divider{
+        border-bottom: 1px solid $secondary-mercury;
+
+        @include desktop{
+            display: flex;
+        }
     }
 
     &__thumbnail{
@@ -22,9 +22,26 @@
         background-color: $secondary-mercury;
 
         @include tablet{
-
+            width: 500px;
+            display: block;
         }
     }
+
+    &__inputs{
+
+        @include desktop{
+            @include marginLeft;
+        }
+    }
+
+    &__label{
+        @include fontBody;
+        text-transform: uppercase;
+        color: $primary-silver;
+        font-weight: 600;
+        padding-bottom: 0.25rem;
+    }
+
 
     &__title{
         @include formField;
@@ -41,13 +58,27 @@
         height: 90px;
     }
 
-    &__submit{
+    &__buttons{
+        @include paddingBeforeHead;
+        display: flex;
+        position: relative;
+        align-items: center;
+    }
+
+    &__publish{
         background: url(../../assets/images/icons/publish.svg) no-repeat 10px 8px;
         @include button;
         @include marginBottom;
         @include fontBody;
         font-weight: 600;
         width: 100%;
+
+        @include tablet{
+            position: absolute;
+            right: 0;
+            top: 1.5rem;
+            width: 150px;
+        }
     }
 
     &__cancel{
@@ -58,6 +89,12 @@
             color: $primary-blue;
             text-transform: uppercase;
             text-align: center;
+
+            @include tablet{
+                padding: 0;
+                position: absolute;
+                right: 250px;
+            }
         }
     }
 }
