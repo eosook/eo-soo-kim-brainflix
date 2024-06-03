@@ -1,0 +1,56 @@
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/button" as *;
+@use "../../styles/partials/form-field" as *;
+@use "../../styles/partials/layout" as *;
+@use "../../styles/partials/fonts" as *;
+
+.upload-form{
+
+    &__label{
+        @include fontSubHeader;
+        text-transform: uppercase;
+        color: $primary-silver;
+        font-weight: 600;
+        padding-bottom: 0.25rem;
+    }
+
+    &__thumbnail{
+        @include marginBottom;
+        width: 100%;
+    }
+
+    &__title{
+        @include formField;
+        @include marginBottom;
+        width: 100%;
+    }
+
+    &__description{
+        @include formField;
+        @include marginBottom;
+        resize: none;
+        overflow: hidden;
+        width: 100%;
+        height: 90px;
+    }
+
+    &__submit{
+        background: url(../../assets/images/icons/publish.svg) no-repeat 10px 8px;
+        @include button;
+        @include marginBottom;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    &__cancel{
+        &--font{
+            @include fontLabelButton;
+            @include paddingBeforeHead;
+            font-weight: 400;
+            color: $primary-blue;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+}
