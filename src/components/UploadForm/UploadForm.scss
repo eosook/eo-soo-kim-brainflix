@@ -7,8 +7,24 @@
 
 .upload-form{
 
+    @include desktop{
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    &__header{
+        @include fontHeader;
+        @include paddingBeforeHead;
+
+        @include tablet{
+            border-bottom: 1px solid $secondary-mercury;
+        }
+    }
+
     &__divider{
         border-bottom: 1px solid $secondary-mercury;
+        @include paddingBeforeHead;
 
         @include desktop{
             display: flex;
@@ -22,8 +38,8 @@
         background-color: $secondary-mercury;
 
         @include tablet{
-            width: 500px;
-            display: block;
+            width: 400px;
+            display: inline-block;
         }
     }
 
@@ -47,6 +63,10 @@
         @include formField;
         @include marginBottom;
         width: 100%;
+
+        @include desktop{
+            margin-top: 0.25rem;
+        }
     }
 
     &__description{
@@ -55,7 +75,7 @@
         resize: none;
         overflow: hidden;
         width: 100%;
-        height: 90px;
+        height: 130px;
     }
 
     &__buttons{
@@ -96,5 +116,9 @@
                 right: 250px;
             }
         }
+    }
+
+    ::placeholder{
+        color: $primary-black;
     }
 }

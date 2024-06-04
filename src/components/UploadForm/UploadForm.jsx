@@ -5,6 +5,7 @@ function UploadForm() {
   console.log(uploadThumbnail);
   return (
     <form className="upload-form">
+        <h1 className="upload-form__header">Upload Video</h1>
       <div className="upload-form__divider">
         <div>
           <h2 className="upload-form__label">video thumbnail</h2>
