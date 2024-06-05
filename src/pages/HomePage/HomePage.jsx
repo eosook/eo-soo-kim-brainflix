@@ -12,13 +12,8 @@ function HomePage() {
     "84e96018-4022-434e-80bf-000ce4cd12b8"
   );
   const [videoData, setVideoData] = useState({
-    id: "",
-    title: "",
-    channel: "",
     image: "",
-    description: "",
-    timestamp: "",
-    comments: [],
+    comments: []
   });
   const { videoId } = useParams();
   const api = "d60d277a-1428-43ef-9f19-7c0c17b58240";
@@ -32,21 +27,22 @@ function HomePage() {
       setVideoData(response.data);
     };
     getData();
-  }, [currentId]);
+  }, []);
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(
-        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key="${api}"`
-      );
-      setVideoData(response.data);
+      if (videoId !== undefined){
+        const response = await axios.get(
+          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key="${api}"`
+        );
+        setVideoData(response.data);
+      }
     };
     getData();
   }, [videoId]);
 
-  function changeVideo(videoId) {
-    setCurrentId(videoId);
-    navigate(`/video/${videoId}`);
+  function changeVideo(newVideoId) {
+    navigate(`/videos/${newVideoId}`);
   }
 
   return (
@@ -58,7 +54,7 @@ function HomePage() {
           <Comments commentsList={videoData.comments} />
         </div>
         <div className="main__divider">
-          <VideoList currentId={currentId} changeVideo={changeVideo} />
+          <VideoList currentId={(videoId == undefined) ? currentId : videoId} changeVideo={changeVideo} />
         </div>
       </div>
     </>
