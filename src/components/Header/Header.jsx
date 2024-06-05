@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <header className="header">
-      <img src={logo} alt="BrainFlix Logo" className="header__logo"></img>
+      <img src={logo} alt="BrainFlix Logo" className="header__logo" onClick={()=> {navigate('/')}}></img>
       <form className="form">
         <input
           type="text"
