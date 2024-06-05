@@ -8,14 +8,12 @@ import Comments from "../../components/Comments/Comments";
 import VideoList from "../../components/VideoList/VideoList";
 
 function HomePage() {
-  const [currentId, setCurrentId] = useState(
-    "84e96018-4022-434e-80bf-000ce4cd12b8"
-  );
   const [videoData, setVideoData] = useState({
     image: "",
     comments: [],
   });
   const { videoId } = useParams();
+  const firstId = "84e96018-4022-434e-80bf-000ce4cd12b8";
   const api = "d60d277a-1428-43ef-9f19-7c0c17b58240";
   const navigate = useNavigate();
 
@@ -28,7 +26,7 @@ function HomePage() {
         setVideoData(response.data);
       } else {
         const response = await axios.get(
-          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${currentId}?api_key="${api}"`
+          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${firstId}?api_key="${api}"`
         );
         setVideoData(response.data);
       }
@@ -50,7 +48,7 @@ function HomePage() {
         </div>
         <div className="main__divider">
           <VideoList
-            currentId={videoId === undefined ? currentId : videoId}
+            currentId={videoId === undefined ? firstId : videoId}
             changeVideo={changeVideo}
           />
         </div>
