@@ -1,11 +1,16 @@
 import "./UploadForm.scss";
 import uploadThumbnail from "../../assets/images/Upload-video-preview.jpg";
+import { useNavigate } from "react-router-dom";
 
 function UploadForm() {
-  console.log(uploadThumbnail);
+  const navigate = useNavigate();
+
+  function navHome(){
+    navigate('/');
+  }
   return (
     <form className="upload-form">
-        <h1 className="upload-form__header">Upload Video</h1>
+      <h1 className="upload-form__header">Upload Video</h1>
       <div className="upload-form__divider">
         <div>
           <h2 className="upload-form__label">video thumbnail</h2>
@@ -32,11 +37,11 @@ function UploadForm() {
         </div>
       </div>
       <div className="upload-form__buttons">
-        <button className="upload-form__publish" type="submit">
+        <button className="upload-form__publish" type="submit" onClick={navHome}>
           publish
         </button>
         <a className="upload-form__cancel">
-          <h2 className="upload-form__cancel--font">cancel</h2>
+          <h2 className="upload-form__cancel--font" onClick={navHome}>cancel</h2>
         </a>
       </div>
     </form>

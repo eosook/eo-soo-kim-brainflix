@@ -1,8 +1,10 @@
 import logo from "../../assets/images/logo/BrainFlix-logo.svg";
-import avatar from "../../assets/images/Mohan-muruge.jpg";
+import { useNavigate } from "react-router-dom";
 import "./Header.scss";
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <header className="header">
       <img src={logo} alt="BrainFlix Logo" className="header__logo"></img>
@@ -12,7 +14,7 @@ function Header() {
           className="form__search"
           placeholder="Search"
         ></input>
-        <button type="submit" className="form__submit">
+        <button type="submit" className="form__submit" onClick={()=> {navigate('/upload')}}>
           upload
         </button>
         <div className="form__avatar"></div>
