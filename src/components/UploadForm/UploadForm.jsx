@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 function UploadForm() {
   const navigate = useNavigate();
 
-  function navHome(){
-    navigate('/');
+  function navHome() {
+    navigate("/");
   }
   return (
     <form className="upload-form">
@@ -37,11 +37,17 @@ function UploadForm() {
         </div>
       </div>
       <div className="upload-form__buttons">
-        <button className="upload-form__publish" type="submit" onClick={navHome}>
+        <button
+          className="upload-form__publish"
+          type="submit"
+          onClick={navHome}
+        >
           publish
         </button>
         <a className="upload-form__cancel">
-          <h2 className="upload-form__cancel--font" onClick={navHome}>cancel</h2>
+          <h2 className="upload-form__cancel--font" onClick={navHome}>
+            cancel
+          </h2>
         </a>
       </div>
     </form>

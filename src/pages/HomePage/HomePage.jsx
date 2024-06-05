@@ -13,7 +13,7 @@ function HomePage() {
   );
   const [videoData, setVideoData] = useState({
     image: "",
-    comments: []
+    comments: [],
   });
   const { videoId } = useParams();
   const api = "d60d277a-1428-43ef-9f19-7c0c17b58240";
@@ -31,7 +31,7 @@ function HomePage() {
 
   useEffect(() => {
     const getData = async () => {
-      if (videoId !== undefined){
+      if (videoId !== undefined) {
         const response = await axios.get(
           `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key="${api}"`
         );
@@ -54,7 +54,10 @@ function HomePage() {
           <Comments commentsList={videoData.comments} />
         </div>
         <div className="main__divider">
-          <VideoList currentId={(videoId == undefined) ? currentId : videoId} changeVideo={changeVideo} />
+          <VideoList
+            currentId={videoId == undefined ? currentId : videoId}
+            changeVideo={changeVideo}
+          />
         </div>
       </div>
     </>

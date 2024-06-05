@@ -93,4 +93,8 @@
       @include marginRight;
     }
   }
+
+  ::placeholder {
+    color: $primary-black;
+  }
 }

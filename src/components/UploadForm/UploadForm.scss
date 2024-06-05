@@ -5,120 +5,120 @@
 @use "../../styles/partials/layout" as *;
 @use "../../styles/partials/fonts" as *;
 
-.upload-form{
+.upload-form {
+  @include desktop {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
 
-    @include desktop{
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 0 1.5rem;
+  &__header {
+    @include fontHeader;
+    @include paddingBeforeHead;
+
+    @include tablet {
+      border-bottom: 1px solid $secondary-mercury;
     }
+  }
 
-    &__header{
-        @include fontHeader;
-        @include paddingBeforeHead;
+  &__divider {
+    border-bottom: 1px solid $secondary-mercury;
+    @include paddingBeforeHead;
 
-        @include tablet{
-            border-bottom: 1px solid $secondary-mercury;
-        }
+    @include desktop {
+      display: flex;
     }
+  }
 
-    &__divider{
-        border-bottom: 1px solid $secondary-mercury;
-        @include paddingBeforeHead;
+  &__thumbnail {
+    @include marginBottom;
+    width: 100%;
+    border-radius: 4px;
+    background-color: $secondary-mercury;
 
-        @include desktop{
-            display: flex;
-        }
+    @include tablet {
+      width: 400px;
+      display: inline-block;
     }
+  }
 
-    &__thumbnail{
-        @include marginBottom;
-        width: 100%;
-        border-radius: 4px;
-        background-color: $secondary-mercury;
-
-        @include tablet{
-            width: 400px;
-            display: inline-block;
-        }
+  &__inputs {
+    @include desktop {
+      @include marginLeft;
+      width: 100%;
     }
+  }
 
-    &__inputs{
+  &__label {
+    @include fontBody;
+    text-transform: uppercase;
+    color: $primary-silver;
+    padding-bottom: 0.25rem;
+  }
 
-        @include desktop{
-            @include marginLeft;
-        }
+  &__title {
+    @include formField;
+    @include marginBottom;
+    width: 100%;
+
+    @include desktop {
+      margin-top: 0.25rem;
     }
+  }
 
-    &__label{
-        @include fontBody;
-        text-transform: uppercase;
-        color: $primary-silver;
-        font-weight: 600;
-        padding-bottom: 0.25rem;
+  &__description {
+    @include formField;
+    @include marginBottom;
+    resize: none;
+    overflow: hidden;
+    width: 100%;
+    height: 130px;
+  }
+
+  &__buttons {
+    @include paddingBeforeHead;
+
+    @include tablet {
+      display: flex;
+      position: relative;
+      align-items: center;
     }
+  }
 
+  &__publish {
+    background: url(../../assets/images/icons/publish.svg) no-repeat 10px 8px;
+    @include button;
+    @include marginBottom;
+    @include fontBody;
+    font-weight: 600;
+    width: 100%;
 
-    &__title{
-        @include formField;
-        @include marginBottom;
-        width: 100%;
-
-        @include desktop{
-            margin-top: 0.25rem;
-        }
+    @include tablet {
+      position: absolute;
+      right: 0;
+      top: 1.5rem;
+      width: 150px;
     }
+  }
 
-    &__description{
-        @include formField;
-        @include marginBottom;
-        resize: none;
-        overflow: hidden;
-        width: 100%;
-        height: 130px;
+  &__cancel {
+    &--font {
+      @include paddingBeforeHead;
+      @include fontBody;
+      font-weight: 600;
+      color: $primary-blue;
+      text-transform: uppercase;
+      text-align: center;
+
+      @include tablet {
+        padding: 0;
+        position: absolute;
+        right: 250px;
+      }
     }
+  }
 
-    &__buttons{
-        @include paddingBeforeHead;
-        display: flex;
-        position: relative;
-        align-items: center;
-    }
-
-    &__publish{
-        background: url(../../assets/images/icons/publish.svg) no-repeat 10px 8px;
-        @include button;
-        @include marginBottom;
-        @include fontBody;
-        font-weight: 600;
-        width: 100%;
-
-        @include tablet{
-            position: absolute;
-            right: 0;
-            top: 1.5rem;
-            width: 150px;
-        }
-    }
-
-    &__cancel{
-        &--font{
-            @include paddingBeforeHead;
-            @include fontBody;
-            font-weight: 600;
-            color: $primary-blue;
-            text-transform: uppercase;
-            text-align: center;
-
-            @include tablet{
-                padding: 0;
-                position: absolute;
-                right: 250px;
-            }
-        }
-    }
-
-    ::placeholder{
-        color: $primary-black;
-    }
+  ::placeholder {
+    color: $primary-black;
+  }
 }
