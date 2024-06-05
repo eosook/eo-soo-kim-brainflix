@@ -23,10 +23,11 @@
 
   &__divider {
     border-bottom: 1px solid $secondary-mercury;
-    @include paddingBeforeHead;
+    padding-top: 1.5rem;
 
     @include desktop {
       display: flex;
+      padding-top: 2rem;
     }
   }
 
