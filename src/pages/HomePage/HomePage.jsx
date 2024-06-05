@@ -21,19 +21,14 @@ function HomePage() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(
-        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${currentId}?api_key="${api}"`
-      );
-      setVideoData(response.data);
-    };
-    getData();
-  }, []);
-
-  useEffect(() => {
-    const getData = async () => {
       if (videoId !== undefined) {
         const response = await axios.get(
           `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key="${api}"`
+        );
+        setVideoData(response.data);
+      } else {
+        const response = await axios.get(
+          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${currentId}?api_key="${api}"`
         );
         setVideoData(response.data);
       }
@@ -55,7 +50,7 @@ function HomePage() {
         </div>
         <div className="main__divider">
           <VideoList
-            currentId={videoId == undefined ? currentId : videoId}
+            currentId={videoId === undefined ? currentId : videoId}
             changeVideo={changeVideo}
           />
         </div>
