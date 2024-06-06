@@ -3,7 +3,7 @@ import "./SingleComment.scss";
 function SingleComment({ name, comment, time }) {
   const date = new Date(time);
   return (
-    <div className="comment">
+    <section className="comment">
       <div className="comment__avatar"></div>
       <div className="comment__info">
         <div className="comment__divider">
@@ -14,7 +14,7 @@ function SingleComment({ name, comment, time }) {
         </div>
         <div className="comment__comment">{comment}</div>
       </div>
-    </div>
+    </section>
   );
 }
 
