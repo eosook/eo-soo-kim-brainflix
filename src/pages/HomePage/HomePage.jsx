@@ -41,7 +41,7 @@ function HomePage() {
   return (
     <>
       <VideoPlayer poster={videoData.image} />
-      <div className="main">
+      <main className="main">
         <div className="main__info-comments">
           <VideoInfo videoInfo={videoData} />
           <Comments commentsList={videoData.comments} />
@@ -52,7 +52,7 @@ function HomePage() {
             changeVideo={changeVideo}
           />
         </div>
-      </div>
+      </main>
     </>
   );
 }

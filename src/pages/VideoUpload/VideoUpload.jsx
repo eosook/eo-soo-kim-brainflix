@@ -3,9 +3,9 @@ import UploadForm from "../../components/UploadForm/UploadForm";
 
 function VideoUpload() {
   return (
-    <div className="upload">
+    <main className="upload">
       <UploadForm />
-    </div>
+    </main>
   );
 }
 
