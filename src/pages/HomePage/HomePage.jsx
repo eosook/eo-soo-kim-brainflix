@@ -12,8 +12,8 @@ function HomePage() {
     image: "",
     comments: [],
   });
+  const [firstId, setFirstId] = useState("")
   const { videoId } = useParams();
-  const firstId = "84e96018-4022-434e-80bf-000ce4cd12b8";
   const api = "d60d277a-1428-43ef-9f19-7c0c17b58240";
   const navigate = useNavigate();
 
@@ -25,9 +25,13 @@ function HomePage() {
         );
         setVideoData(response.data);
       } else {
-        const response = await axios.get(
-          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${firstId}?api_key="${api}"`
+        const getData = await axios.get(
+          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key="${api}"`
         );
+        const response = await axios.get(
+          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${getData.data[0].id}?api_key="${api}"`
+        );
+        setFirstId(getData.data[0].id);
         setVideoData(response.data);
       }
     };
