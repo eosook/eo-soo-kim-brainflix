@@ -15,21 +15,22 @@ function HomePage() {
   const [firstId, setFirstId] = useState("")
   const { videoId } = useParams();
   const api = "d60d277a-1428-43ef-9f19-7c0c17b58240";
+  const apiUrl = "http://localhost:5050";
   const navigate = useNavigate();
 
   useEffect(() => {
     const getData = async () => {
       if (videoId !== undefined) {
         const response = await axios.get(
-          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key="${api}"`
+          `${apiUrl}/videos/${videoId}`
         );
         setVideoData(response.data);
       } else {
         const getData = await axios.get(
-          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key="${api}"`
+          `${apiUrl}`
         );
         const response = await axios.get(
-          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${getData.data[0].id}?api_key="${api}"`
+          `${apiUrl}/videos/${getData.data[0].id}`
         );
         setFirstId(getData.data[0].id);
         setVideoData(response.data);
