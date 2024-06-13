@@ -1,9 +1,9 @@
 import "./UploadForm.scss";
-import uploadThumbnail from "../../assets/images/Upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
 
 function UploadForm() {
   const navigate = useNavigate();
+  const uploadThumbnail = "http://localhost:5050/images/Upload-video-preview.jpg";
 
   function navHome() {
     navigate("/");

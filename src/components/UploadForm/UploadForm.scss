@@ -87,7 +87,7 @@
   }
 
   &__publish {
-    background: url(../../assets/images/icons/publish.svg) no-repeat 10px 8px;
+    background: url(http://localhost:5050/images/icons/publish.svg) no-repeat 10px 8px;
     @include button;
     @include marginBottom;
     @include fontBody;

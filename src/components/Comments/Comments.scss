@@ -60,7 +60,7 @@
   }
 
   &__button {
-    background: url(../../assets/images/icons/add_comment.svg) no-repeat 10px
+    background: url(http://localhost:5050/images/icons/add_comment.svg) no-repeat 10px
       8px;
     @include button;
     width: 100%;
@@ -72,7 +72,7 @@
   }
 
   &__image {
-    background: url(../../assets/images/Mohan-muruge.jpg) no-repeat;
+    background: url(http://localhost:5050/images/Mohan-muruge.jpg) no-repeat;
     background-size: cover;
     height: 36px;
     min-width: 36px;

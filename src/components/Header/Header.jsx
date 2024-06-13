@@ -1,10 +1,11 @@
-import logo from "../../assets/images/logo/BrainFlix-logo.svg";
+// import logo from "http://localhost:5050/images/logo/BrainFlix-logo.svg";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
 function Header() {
   const navigate = useNavigate();
+  const logo = "http://localhost:5050/images/logo/BrainFlix-logo.svg";
 
   return (
     <header className="header">

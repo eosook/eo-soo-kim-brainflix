@@ -54,7 +54,7 @@
   }
   &__search {
     @include marginBottom;
-    background: url(../../assets/images/icons/search.svg) no-repeat 10px 8px;
+    background: url(http://localhost:5050/images/icons/search.svg) no-repeat 10px 8px;
     @include formField;
     height: 36px;
     width: 80%;
@@ -67,7 +67,7 @@
     }
   }
   &__avatar {
-    background: url(../../assets/images/Mohan-muruge.jpg) no-repeat;
+    background: url(http://localhost:5050//images/Mohan-muruge.jpg) no-repeat;
     background-size: cover;
     position: absolute;
     right: 0;
@@ -86,7 +86,7 @@
   }
 
   &__submit {
-    background: url(../../assets/images/icons/upload.svg) no-repeat 10px 8px;
+    background: url(http://localhost:5050/images/icons/upload.svg) no-repeat 10px 8px;
     @include button;
     width: 100%;
 
