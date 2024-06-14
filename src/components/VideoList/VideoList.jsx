@@ -9,7 +9,7 @@ function VideoList({currentId, changeVideo}) {
   useEffect(() => {
     const getVideoList = async () => {
       const response = await axios.get(
-        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key="d60d277a-1428-43ef-9f19-7c0c17b58240`
+        `http://localhost:5050/videos`
       )
       setVideoList(response.data);
     }
