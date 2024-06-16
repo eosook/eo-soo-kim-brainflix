@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function UploadForm() {
   const navigate = useNavigate();
-  const uploadThumbnail = "http://localhost:5050/images/Upload-video-preview.jpg";
+  const uploadThumbnail = "http://localhost:5050/images/terrifiednootnoot.jpg";
   const uploadUrl = "http://localhost:5050/upload";
 
   function navHome() {
